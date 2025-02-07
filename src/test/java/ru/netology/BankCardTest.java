@@ -40,7 +40,7 @@ public class BankCardTest {
     @Test
     void shouldSendFormV1() { //Тест на заполнение формы согласно требованиям
         WebElement form = driver.findElement(By.cssSelector("form"));
-        form.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Петр Петров");
+        form.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Петров Петр");
         form.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79991234567");
         form.findElement(By.cssSelector("[data-test-id='agreement']")).click();
         form.findElement(By.cssSelector("button")).click();
@@ -51,7 +51,7 @@ public class BankCardTest {
     @Test
     void shouldSendFormV2() { //Тест на заполнение формы согласно требованиям
         WebElement form = driver.findElement(By.cssSelector("form"));
-        form.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Петр-Иван Петров"); // Ставим Имя через дефис
+        form.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Петров Петр-Иван"); // Ставим Имя через дефис
         form.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79991234567");
         form.findElement(By.cssSelector("[data-test-id='agreement']")).click();
         form.findElement(By.cssSelector("button")).click();
